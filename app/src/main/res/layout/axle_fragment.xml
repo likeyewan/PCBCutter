@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:suspend="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/axle_f"
+    tools:context=".ui.fragment.AxleFragment">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:id="@+id/linear"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/canshu"
+                android:text="轴号：" />
+
+            <Spinner
+                android:background="@drawable/spinner"
+                android:id="@+id/zhouhao"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="50dp"
+                android:overlapAnchor="false" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_weight="3"
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/canshu"
+                android:text="脉冲数/圈：" />
+
+            <EditText
+
+                android:textCursorDrawable="@android:color/holo_blue_light"
+                android:textColor="@color/black"
+                android:id="@+id/mchs"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_edittext_background"
+                android:textSize="@dimen/canshu"
+                android:maxLines="1"
+                android:inputType="number"
+                android:hint="20000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/axle_mt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/canshu"
+                android:text="镙距(mm)：" />
+
+            <EditText
+                android:textCursorDrawable="@android:color/holo_blue_light"
+                android:textColor="@color/black"
+                android:id="@+id/lj"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_edittext_background"
+                android:textSize="@dimen/canshu"
+                android:maxLines="1"
+                android:inputType="numberDecimal"
+                android:hint="20000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/axle_mt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/canshu"
+                android:text="起始速度(mm/s)：" />
+            <EditText
+                android:textCursorDrawable="@android:color/holo_blue_light"
+                android:textColor="@color/black"
+                android:id="@+id/qssd"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/canshu"
+                android:background="@drawable/custom_edittext_background"
+                android:maxLines="1"
+                android:inputType="numberDecimal"
+                android:hint="20000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/axle_mt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/canshu"
+                android:text="运行速度(mm/s)：" />
+            <EditText
+                android:textCursorDrawable="@android:color/holo_blue_light"
+                android:textColor="@color/black"
+                android:id="@+id/yxsd"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/canshu"
+                android:maxLines="1"
+                android:inputType="numberDecimal"
+                android:background="@drawable/custom_edittext_background"
+                android:hint="20000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/axle_mt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/canshu"
+                android:text="回零速度(mm/s)：" />
+            <EditText
+                android:textCursorDrawable="@android:color/holo_blue_light"
+                android:textColor="@color/black"
+                android:id="@+id/hlsd"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/canshu"
+                android:maxLines="1"
+                android:inputType="numberDecimal"
+                android:background="@drawable/custom_edittext_background"
+                android:hint="20000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/axle_mt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/canshu"
+                android:text="加速度(mm/s)：" />
+            <EditText
+                android:textCursorDrawable="@android:color/holo_blue_light"
+                android:textColor="@color/black"
+                android:id="@+id/jsd"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/canshu"
+                android:maxLines="1"
+                android:inputType="numberDecimal"
+                android:background="@drawable/custom_edittext_background"
+                android:hint="20000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/axle_mt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/canshu"
+                android:text="减速度(mm/s)：" />
+            <EditText
+                android:textCursorDrawable="@android:color/holo_blue_light"
+                android:textColor="@color/black"
+                android:id="@+id/jiansd"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/canshu"
+                android:maxLines="1"
+                android:inputType="numberDecimal"
+                android:background="@drawable/custom_edittext_background"
+                android:hint="20000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/axle_mt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/canshu"
+                android:text="软限位正(mm)：" />
+            <EditText
+                android:textCursorDrawable="@android:color/holo_blue_light"
+                android:textColor="@color/black"
+                android:id="@+id/rxwz"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/canshu"
+                android:maxLines="1"
+                android:inputType="numberDecimal"
+                android:background="@drawable/custom_edittext_background"
+                android:hint="20000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/axle_mt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/canshu"
+                android:text="软限位负(mm)：" />
+            <EditText
+                android:textColor="@color/black"
+                android:textCursorDrawable="@android:color/holo_blue_light"
+                android:id="@+id/rxwf"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/canshu"
+                android:maxLines="1"
+                android:inputType="numberDecimal"
+                android:background="@drawable/custom_edittext_background"
+                android:hint="20000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/axle_mt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/canshu"
+                android:text="运行状态：" />
+
+            <EditText
+                android:textColor="@color/black"
+                android:textCursorDrawable="@android:color/holo_blue_light"
+                android:id="@+id/yxzt"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/canshu"
+                android:maxLines="1"
+                android:inputType="numberDecimal"
+                android:background="@drawable/custom_edittext_background" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/canshu"
+                android:text="当前位置：" />
+
+            <EditText
+                android:textColor="@color/black"
+                android:textCursorDrawable="@android:color/holo_blue_light"
+                android:id="@+id/dqwz"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/canshu"
+                android:maxLines="1"
+                android:inputType="numberDecimal"
+                android:background="@drawable/custom_edittext_background" />
+        </LinearLayout>
+        <!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/canshu"
+                android:text="速度：" />
+
+            <EditText
+                android:textColor="@color/black"
+                android:textCursorDrawable="@android:color/holo_blue_light"
+                android:id="@+id/sd"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/canshu"
+                android:maxLines="1"
+                android:inputType="numberDecimal"
+                android:background="@drawable/custom_edittext_background"
+                android:hint="20000" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioGroup
+                android:id="@+id/rg_jdxd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                <RadioButton
+                    android:id="@+id/rb_jd"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/t1"
+                    android:textColor="@color/black"
+                    android:checked="true"
+                    android:text="绝对" />
+                <RadioButton
+                    android:id="@+id/rb_xd"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/t1"
+                    android:textColor="@color/black"
+                    android:text="相对" />
+            </RadioGroup>
+        </LinearLayout>
+        -->
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_marginRight="5dp"
+                android:textColor="@color/black"
+                android:id="@+id/xw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bg"
+                android:text="限位" />
+
+            <Button
+                android:layout_marginRight="5dp"
+                android:textColor="@color/black"
+                android:id="@+id/hl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bg"
+                android:text="回零" />
+
+            <Button
+                android:layout_marginRight="5dp"
+                android:textColor="@color/black"
+                android:id="@+id/zhx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bg"
+                android:text="正向" />
+
+            <Button
+                android:textColor="@color/black"
+                android:id="@+id/fx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bg"
+                android:text="反向" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_marginRight="5dp"
+                android:textColor="@color/black"
+                android:id="@+id/dq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bg"
+                android:text="读取" />
+
+            <Button
+                android:layout_marginRight="5dp"
+                android:textColor="@color/black"
+                android:id="@+id/shd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bg"
+                android:text="设定" />
+            <Button
+                android:textColor="@color/black"
+                android:id="@+id/cx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bg"
+                android:text="查询" />
+            <Button
+                android:textColor="@color/black"
+                android:id="@+id/tc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bg"
+                android:text="停止" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_marginRight="5dp"
+                android:textColor="@color/black"
+                android:id="@+id/cxzwz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bg"
+                android:text="查询轴位置" />
+
+            <Button
+                android:layout_marginRight="5dp"
+                android:textColor="@color/black"
+                android:id="@+id/cxzzt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bg"
+                android:text="查询轴状态" />
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/fab1"
+            android:backgroundTint="@color/green"
+            android:layout_margin="20dp"
+            android:visibility="gone"
+            android:layout_gravity="top|start"/>
+
+        <com.hih.pcbcutter.ui.view.SuspendButtonLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            suspend:distance="80dp"
+            suspend:image1="@mipmap/suspend_3"
+            suspend:image2="@mipmap/suspend_3"
+            suspend:image3="@mipmap/suspend_3"
+            suspend:image4="@mipmap/suspend_3"
+            suspend:image5="@mipmap/suspend_3"
+            suspend:image6="@mipmap/suspend_3"
+            suspend:image7="@mipmap/suspend_3"
+            suspend:image8="@mipmap/suspend_3"
+            suspend:imageMainClose="@mipmap/suspend_main_close"
+            suspend:imageMainOpen="@mipmap/suspend_main_open"
+            suspend:imageSize="50dp"
+            suspend:marginY="150dp"
+            suspend:number="8" />
+    </FrameLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="10dp"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/canshu"
+            android:text="轴号：" />
+
+        <EditText
+            android:textColor="@color/black"
+            android:id="@+id/zhouhao"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/canshu"
+            android:maxLines="1"
+            android:inputType="numberDecimal"
+            android:background="@drawable/custom_edittext_background"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/canshu"
+            android:text="位置：" />
+
+        <EditText
+            android:textColor="@color/black"
+            android:id="@+id/wz"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/canshu"
+            android:maxLines="1"
+            android:inputType="numberDecimal"
+            android:background="@drawable/custom_edittext_background" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/canshu"
+            android:text="速度：" />
+
+        <EditText
+            android:textColor="@color/black"
+            android:id="@+id/sd"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/canshu"
+            android:maxLines="1"
+            android:inputType="numberDecimal"
+            android:background="@drawable/custom_edittext_background" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioGroup
+            android:id="@+id/rg_jdxd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <RadioButton
+                android:id="@+id/rb_jd"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/t1"
+                android:textColor="@color/black"
+                android:checked="true"
+                android:text="绝对" />
+            <RadioButton
+                android:id="@+id/rb_xd"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/t1"
+                android:textColor="@color/black"
+                android:text="相对" />
+        </RadioGroup>
+    </LinearLayout>
+    <!--<RadioGroup
+        android:id="@+id/rg_ydfx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <RadioButton
+            android:id="@+id/rb_zy"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/t1"
+            android:textColor="@color/black"
+            android:checked="true"
+            android:text="正移" />
+        <RadioButton
+            android:id="@+id/rb_fy"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/t1"
+            android:textColor="@color/black"
+            android:text="负移" />
+    </RadioGroup>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:id="@+id/ddcz_pre"
+            android:background="@drawable/btn_bg"
+            android:text="上一个"></Button>
+
+    </LinearLayout>
+    -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:id="@+id/reconnect_qx"
+            android:background="@drawable/btn_bg"
+            android:text="取消"></Button>
+        <Button
+            android:layout_marginLeft="10dp"
+            android:layout_width="80dp"
+            android:background="@drawable/btn_bg"
+            android:layout_height="35dp"
+            android:id="@+id/ddcz_next"
+            android:text="下一个"></Button>
+        <Button
+            android:layout_marginLeft="10dp"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:id="@+id/reconnect_qd"
+            android:background="@drawable/btn_bg"
+            android:textColor="@color/black"
+            android:text="确定"></Button>
+    </LinearLayout>
+</LinearLayout>

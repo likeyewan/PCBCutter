@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dp_1">1dp</dimen>
+    <dimen name="canshu">25sp</dimen>
+    <dimen name="type">20sp</dimen>
+    <dimen name="t1">18sp</dimen>
+    <dimen name="t1_num">15sp</dimen>
+    <dimen name="t2">15sp</dimen>
+    <dimen name="t2_num">15sp</dimen>
+    <dimen name="t2_button_text">9sp</dimen>
+    <dimen name="t2_b_h">20dp</dimen>
+    <dimen name="t2_b_m">5dp</dimen>
+    <dimen name="t_set_t">20sp</dimen>
+    <dimen name="t_set_mt">2dp</dimen>
+    <dimen name="axle_mt">3dp</dimen>
+</resources>

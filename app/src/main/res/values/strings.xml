@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PCBCutter</string>
+    <string name="viewfinderview_status_text1">将二维码/条码放入取景框内</string>
+    <string name="viewfinderview_status_text2">即可自动扫描</string>
+    <string name="msg_camera_framework_bug">Sorry, the Android camera encountered a problem. You may need to restart the device.</string>
+    <string name="button_ok">OK</string>
+    <string name="fragment1">运行</string>
+    <string name="fragment2">设置</string>
+    <string name="fragment_3">记录</string>
+    <string name="languageSet">语言设定</string>
+    <string name="modify">修改</string>
+    <string name="jqxh">机器型号:</string>
+</resources>
